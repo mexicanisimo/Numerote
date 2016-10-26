@@ -4,37 +4,35 @@ package uno;
  * Created by El sabroso on 25/10/2016.
  */
 
+import javax.swing.JOptionPane;
+
 public class Principal {
 
-    public static void main(String args []){
-        int tam = JOptionPane.showInputDialog(null, "Ingresa tamaño");
+    public static void main(String args []) {
+        int tam = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa tamaño de los arreglos"));
 
-        Numerote nu = new Numerote(10, 10, tam);
+        Numerote nu = new Numerote(tam, tam);
         int opcion = nu.Menu();
 
-        do {
-            switch (opcion) {
-                case 1:
-                    nu.elementos();
-                    break;
-                case 2:
-                    nu.llenararreglo();
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    System.exit(0);
-                    break;
-                default:
-                    return;
-            }
-        } while (opcion < 8);
+        switch (opcion) {
+            case 1:
+                nu.llenarArreglo();
+                break;
+            case 2:
+                nu.llenarArreglo2();
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                System.exit(0);
+                break;
+        }
     }
 
 }

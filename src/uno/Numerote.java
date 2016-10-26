@@ -10,35 +10,29 @@ import javax.swing.*;
 public class Numerote {
     private int[] arreglo;
     private int[] arreglo2;
-    private int tam;
 
-    public Numerote(int ent, int ent1, int tam) {
+    public Numerote(int ent, int ent1) {
         this.arreglo = new int[ent];
         this.arreglo2 = new int[ent1];
-        this.tam = tam;
     }
-    public int elementos() {
+   /* public int elementos() {
         String elemento = JOptionPane.showInputDialog("Dame el numero de elementos");
         return Integer.parseInt(elemento);
-    }
+        }
+   */
     
     public void llenarArreglo() {
-        for(int i = 0; i < tam; i++) {
-            String a = JOptionPane.showInputDialog("Ingresa elemento uno a uno");
-            int arre= Integer.parseInt(a);
-
-            if(arre > 0) {
-
-            }
+        for(int i = 0; i < arreglo.length; i++) {
+            String a = JOptionPane.showInputDialog("Ingresa elemento " + (i + 1));
+            arreglo[i] = Integer.parseInt(a);
         }
     }
 
-    public int optenerTamaño() {
-        return arreglo.length;
-    }
-
-    public int optenenertamaño2() {
-        return arreglo2.length;
+    public void llenarArreglo2() {
+        for(int i = 0; i < arreglo2.length; i++) {
+            String a = JOptionPane.showInputDialog("Ingresa elemento " + (i + 1));
+            arreglo2[i] = Integer.parseInt(a);
+        }
     }
 
     public int obtener(int f) {

@@ -7,16 +7,18 @@ package uno;
 public class Principal {
 
     public static void main(String args []){
-        Numerote Nu = new Numerote(10,10);
-        int opcion = Nu.Menu();
+        int tam = JOptionPane.showInputDialog(null, "Ingresa tamaño");
+
+        Numerote nu = new Numerote(10, 10, tam);
+        int opcion = nu.Menu();
 
         do {
             switch (opcion) {
                 case 1:
-                    Nu.elementos();
+                    nu.elementos();
                     break;
                 case 2:
-                    Nu.llenararreglo();
+                    nu.llenararreglo();
                     break;
                 case 3:
                     break;
